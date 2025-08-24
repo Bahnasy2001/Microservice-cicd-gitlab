@@ -1,7 +1,7 @@
 let express = require('express');
 let app = express();
 
-// test
+// deploy
 app.get('/', function (req, res) {
     res.json({ 
         shoppingCart: [{
