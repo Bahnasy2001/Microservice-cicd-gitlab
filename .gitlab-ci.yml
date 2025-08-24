@@ -96,8 +96,8 @@ deploy_frontend:
   variables:
     MICRO_SERVICE: "frontend"
     SERVICE_VERSION: "1.3"
-    APP_PORT: "3000"
-    HOST_PORT: "6000"
+    APP_PORT: 3000
+    HOST_PORT: 6000
   only:
     changes:
       - "frontend/**/*"
@@ -107,8 +107,8 @@ deploy_products:
   variables:
     MICRO_SERVICE: "products"
     SERVICE_VERSION: "1.8"
-    APP_PORT: "3001"
-    HOST_PORT: "3001"
+    APP_PORT: 3001
+    HOST_PORT: 3001
   only:
     changes:
       - "products/**/*"
@@ -118,8 +118,8 @@ deploy_shopping_cart:
   variables:
     MICRO_SERVICE: "shopping-cart"
     SERVICE_VERSION: "2.1"
-    APP_PORT: "3002"
-    HOST_PORT: "3002"
+    APP_PORT: 3002
+    HOST_PORT: 3002
   only:
     changes:
       - "shopping-cart/**/*"
