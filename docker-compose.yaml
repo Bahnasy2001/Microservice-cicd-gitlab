@@ -4,6 +4,9 @@ services:
     image: ${DC_IMAGE_NAME}:${DC_IMAGE_TAG}
     ports:
       - ${DC_HOST_PORT}:${DC_APP_PORT}
+    environment:
+      - PRODUCTS_SERVICE=products_app_1
+      - SHOPPING_CART_SERVICE=shopping-cart_app_1
     networks:
       - micro_service
 networks:

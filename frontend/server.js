@@ -28,16 +28,22 @@ app.get('/get-products', function (req, res) {
 
         response.on('end', function () {
             console.log(str);
-            res.writeHead(200)
+            res.writeHead(200);
             res.end(str);
         });
-    }
+    };
 
     var req = http.request(options, callback);
-    // This is a request to "products" service
+    
+    req.on('error', function(e) {
+        console.error(`Problem with request: ${e.message}`);
+        res.status(500).send('Internal Server Error');
+    });
+
     req.write("");
     req.end();
 });
+
 
 app.get('/get-shopping-cart', function (req, res) {
     var http = require('http');
